@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 25px 70px;
+    background-color: #F4F4F4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 30px;
+    padding-top: 15px;
+}
+
+.navbar .nav-links ul li a[href='#Contact']{
+    margin-top: -10px;
+    border: 1.5px solid black;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.navbar .nav-links ul li a[href='#Contact']:hover{
+    background-color: black;
+    color: white;
+    transition: background-color 0.35s ease-in, color 0.5s ease-in;
+}
+.navbar .nav-links ul li a{
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .nav-links ul li a:not([href="#Contact"])::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px; 
+    height: 2px;
+    width: 100%;
+    background: #FFC107; 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms ease;
+}
+
+.navbar .nav-links ul li a:not([href="#Contact"]):hover::after{
+    transform: scaleX(1);
+}
+
+.navbar li a{
+    color: black;
+    font-size: 25px;
+    transition: color 0.35s ease-in-out;
+}
+
+
+.navbar .name{
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .name::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 4px;
+    width: 100%;
+    background: #FFC107;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms ease;
+}
+
+.navbar .name:hover::after{
+    transform: scaleX(1);
+}
+
+ .hero{
+    height: 400px;
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+ }
+ .hero h1{
+    font-size: 45px;
+    color: black;
+ }
+ .hero p{
+    font-size: 20px;
+ }
+ .hero img{
+    max-height: 800px; 
+    width: auto;
+    object-fit: contain;    
+ }
+
+ .Icons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 150px;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.icon-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.icon-item i{
+    margin-bottom: 20px;
+}
+.icon-item h1{
+    font-size: 25px;
+    margin: 0;
+}
+
+.icon-item p{
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Start of Second page */
+.Serve{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    font-size: 50px;
+    text-decoration: underline #FFC107 3px;
+    text-underline-offset: 10px;
+}
+
+.Services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
+    padding: 20px;
+    margin-top: 45px;
+}
+
+.Services .Types{
+    margin-top: -125px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-left: 175px;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('Icons/Service-IMG.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 400px;
+    min-height: 550px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Services .Types h1{
+    color: white;
+    text-decoration: underline darkgrey 2px;
+    text-underline-offset: 10px;
+    display: block;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.Services .Summary{
+    display: flex;
+    flex-direction: column;
+    margin-top: -115px;
+    justify-content: flex-start;
+    max-width: 650px;
+    min-height: 450px;
+    padding: 30px;
+    padding: 25px;
+    gap: 125px;
+}
+
+.Services .Summary p{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Projects page AKA 3rd page */
+
+/* Projects page AKA 3rd page */
+.Projects {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 40px; /* Space above and below the title */
+    font-size: 50px;
+    text-decoration: underline #FFC107 3px;
+    text-underline-offset: 10px;
+}
+
+.Gallery {
+    display: grid;
+    /* This creates a 2x2 grid by default, or 4 columns on large screens */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 100px; /* Centers the gallery and adds bottom margin */
+    padding: 0 20px;
+}
+
+.Gallery-item {
+    overflow: hidden;
+    border-radius: 15px; /* Matches your Service card style */
+    height: 300px; /* Fixed height for uniformity */
+    border: 1px solid #ddd;
+}
+
+.Gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This prevents images from stretching */
+    transition: transform 0.5s ease;
+}
+
+.Gallery-item img:hover {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+    cursor: pointer;
+}
+
+/* Contact Form at bottom of the page */
+
+.Contact-Section {
+    background-color: #1A1A1A;
+    color: white;
+    padding: 80px 20px;
+}
+
+.Contact-Container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Contact-Info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.Contact-Info h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #FFC107; 
+}
+
+.Contact-Info ul {
+    margin-top: 30px;
+}
+
+.Contact-Info li {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.Contact-Form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Contact-Form input, .Contact-Form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.Contact-Form button {
+    background-color: #F98100; 
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.Contact-Form button:hover {
+    background-color: #d87000;
+}
