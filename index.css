@@ -106,7 +106,7 @@ html{
 }
 
  .hero{
-    height: 400px;
+    min-height: 400px;
     background-color: #F4F4F4;
     display: flex;
     justify-content: center;
@@ -325,4 +325,73 @@ html{
 
 .Contact-Form button:hover {
     background-color: #d87000;
+}
+
+
+
+/* Responsive Design for mobile devices */
+@media (max-width: 768px) {
+    
+    .hero {
+        flex-direction: column;
+        height: auto; 
+        gap: 40px;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero img {
+        max-width: 80%;
+        height: auto;
+    }
+
+   
+    .Icons {
+        flex-direction: column;
+        gap: 50px;
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .Services {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .Services .Types {
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .Services .Summary {
+        margin-top: 0;
+        padding: 10px;
+        gap: 40px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .navbar .nav-links ul {
+        flex-direction: row; 
+        justify-content: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 0 10px; 
+    }
+
+    .navbar li a {
+        font-size: 18px; 
+    }
 }
